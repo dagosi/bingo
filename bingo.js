@@ -99,7 +99,21 @@ $(document).ready(function() {
 
   $("#new-draw").on('click', function() {
     let number = drawNumber();
-    $("#draw").text(number);
+    let letter;
+
+    if(number <= 15) {
+      letter = "B";
+    } else if(number > 15 && number <= 30) {
+      letter = "I";
+    } else if(number > 30 && number <= 45) {
+      letter = "N";
+    } else if(number > 45 && number <= 60) {
+      letter = "G";
+    } else {
+      letter = "O";
+    }
+
+    $("#draw").text(letter + number);
 
     if(board.length == 0) {
       $(this).prop('disabled', true);
