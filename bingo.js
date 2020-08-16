@@ -24,7 +24,6 @@ $(document).ready(function() {
       };
     });
 
-    console.log(board)
     sessionStorage.setItem("board", JSON.stringify(board));
 
     return number;
@@ -94,7 +93,6 @@ $(document).ready(function() {
 
   function resetBoard() {
     sessionStorage.clear();
-    console.log(board)
   }
 
   printBoard();
